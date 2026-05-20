@@ -59,6 +59,7 @@ public class NbkrFetchServiceImpl implements NbkrFetchService {
                 result.add(currencyRate);
             }
 
+            log.info("Успешно стянуто {} записей", result.size());
             return result;
 
         } catch (Exception e) {
