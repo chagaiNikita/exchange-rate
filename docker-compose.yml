@@ -1,0 +1,9 @@
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: currency_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "9091:5432"

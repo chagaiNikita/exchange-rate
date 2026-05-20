@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "exchange-rate"
+  datasource:
+    url: jdbc:postgresql://localhost:9091/currency_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/master.yaml
+    default-schema: public
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: gmr
